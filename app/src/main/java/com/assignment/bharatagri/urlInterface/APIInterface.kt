@@ -8,7 +8,7 @@ import retrofit2.http.Query
 interface APIInterface {
 
     @GET("popular")
-    fun getMovies(@Query("api_key") api_key: String, s: String): Single<Result>
+    fun getMovies(@Query("api_key") api_key: String): Single<Result>
 }
 
 

@@ -27,7 +27,7 @@ class MoviesViewModel : ViewModel() {
 
     private fun loadSources(s: String) {
         val apiService = APIClient.getClient().create(APIInterface::class.java)
-        val call = apiService.getMovies(BuildConfig.API_KEY, s)
+        val call = apiService.getMovies(BuildConfig.API_KEY)
 
         compositeDisposable.add(
             call.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
